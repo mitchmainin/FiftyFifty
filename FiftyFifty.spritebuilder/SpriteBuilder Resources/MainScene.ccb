@@ -179,8 +179,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>157.60003662109375</real>
-									<real>532.73431396484375</real>
+									<real>152.80003356933594</real>
+									<real>497.93429565429688</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -237,7 +237,7 @@
 							<key>collisionMask</key>
 							<array/>
 							<key>collisionType</key>
-							<string></string>
+							<string>boundingBox</string>
 							<key>cornerRadius</key>
 							<real>0.0</real>
 							<key>density</key>
@@ -293,6 +293,14 @@
 						<array>
 							<dict>
 								<key>name</key>
+								<string>visible</string>
+								<key>type</key>
+								<string>Check</string>
+								<key>value</key>
+								<false/>
+							</dict>
+							<dict>
+								<key>name</key>
 								<string>name</string>
 								<key>type</key>
 								<string>StringSimple</string>
@@ -306,8 +314,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.4921107292175293</real>
-									<real>515</real>
+									<real>0.5</real>
+									<real>480</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -457,6 +465,14 @@
 						<array>
 							<dict>
 								<key>name</key>
+								<string>visible</string>
+								<key>type</key>
+								<string>Check</string>
+								<key>value</key>
+								<false/>
+							</dict>
+							<dict>
+								<key>name</key>
 								<string>name</string>
 								<key>type</key>
 								<string>StringSimple</string>
@@ -471,7 +487,7 @@
 								<key>value</key>
 								<array>
 									<real>-0.11829806864261627</real>
-									<real>513.62738037109375</real>
+									<real>480</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -565,7 +581,7 @@
 							<key>collisionMask</key>
 							<array/>
 							<key>collisionType</key>
-							<string></string>
+							<string>boundingBox</string>
 							<key>cornerRadius</key>
 							<real>0.0</real>
 							<key>density</key>
@@ -621,6 +637,14 @@
 						<array>
 							<dict>
 								<key>name</key>
+								<string>visible</string>
+								<key>type</key>
+								<string>Check</string>
+								<key>value</key>
+								<false/>
+							</dict>
+							<dict>
+								<key>name</key>
 								<string>name</string>
 								<key>type</key>
 								<string>StringSimple</string>
@@ -635,7 +659,7 @@
 								<key>value</key>
 								<array>
 									<real>319</real>
-									<real>515</real>
+									<real>480</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -785,6 +809,14 @@
 						<array>
 							<dict>
 								<key>name</key>
+								<string>visible</string>
+								<key>type</key>
+								<string>Check</string>
+								<key>value</key>
+								<false/>
+							</dict>
+							<dict>
+								<key>name</key>
 								<string>name</string>
 								<key>type</key>
 								<string>StringSimple</string>
@@ -799,7 +831,7 @@
 								<key>value</key>
 								<array>
 									<real>-0.11829806864261627</real>
-									<real>555</real>
+									<real>520</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
