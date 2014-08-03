@@ -10,7 +10,7 @@
 #import "Player.h"
 #import "Gameover.h"
 
-static  CGFloat scrollSpeed = 300.f;
+static  CGFloat scrollSpeed = 200.f;
 
 @implementation MainScene
 {

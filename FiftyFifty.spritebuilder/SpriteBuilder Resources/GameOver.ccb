@@ -329,8 +329,8 @@
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string>play</string>
-							<integer>2</integer>
+							<string>restart</string>
+							<integer>1</integer>
 						</array>
 					</dict>
 					<dict>
@@ -397,7 +397,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>ccbResources/NeonFloorYellow.png</string>
 						</array>
 					</dict>
 					<dict>
