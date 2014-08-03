@@ -9,5 +9,8 @@
 #import "CCNode.h"
 
 @interface MainScene : CCNode
+- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event;
+
+
 
 @end

@@ -7,7 +7,38 @@
 //
 
 #import "MainScene.h"
+#import "Player.h"
 
 @implementation MainScene
+{
+    Player *player;
+    CCPhysicsNode *_physicsNode;
+}
+
+-(void) didLoadFromCCB
+{
+    self.userInteractionEnabled = TRUE;
+    _physicsNode.collisionDelegate = self;
+
+}
+
+
+-(BOOL) ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCSprite *)nodeA boundingBox:(CCNode *)nodeB
+{
+
+    return TRUE;
+}
+
+-(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    NSLog(@"jbvjbvbsvbsbfksd");
+    
+}
+
+-(void) touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    CGPoint touchLocation = [touch locationInNode:self];
+    player.position = ccp(touchLocation.x, player.position.y);
+}
 
 @end
