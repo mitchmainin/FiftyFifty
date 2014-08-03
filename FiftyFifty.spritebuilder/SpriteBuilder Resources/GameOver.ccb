@@ -329,8 +329,8 @@
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string>restart</string>
-							<integer>1</integer>
+							<string>play</string>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -584,6 +584,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -807,7 +809,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string></string>
+		<string>Gameover</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>

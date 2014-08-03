@@ -85,7 +85,7 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>106.5</real>
+							<real>188</real>
 							<real>20</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -140,7 +140,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>Obstacle</string>
+		<string></string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
@@ -174,40 +174,40 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>35.543571472167969</real>
-					<real>41.439868927001953</real>
+					<real>36.349842071533203</real>
+					<real>42.225040435791016</real>
 				</array>
 				<array>
 					<real>36.234928131103516</real>
 					<real>62.453670501708984</real>
 				</array>
 				<array>
-					<real>142.67912292480469</real>
-					<real>62.647701263427734</real>
+					<real>224.58001708984375</real>
+					<real>62.479671478271484</real>
 				</array>
 				<array>
-					<real>142.40408325195312</real>
-					<real>41.861843109130859</real>
+					<real>224.451171875</real>
+					<real>42.008026123046875</real>
 				</array>
 			</array>
 			<key>polygons</key>
 			<array>
 				<array>
 					<array>
-						<real>142.40408325195312</real>
-						<real>41.861843109130859</real>
+						<real>224.451171875</real>
+						<real>42.008026123046875</real>
 					</array>
 					<array>
-						<real>142.67912292480469</real>
-						<real>62.647701263427734</real>
+						<real>224.58001708984375</real>
+						<real>62.479671478271484</real>
 					</array>
 					<array>
 						<real>36.234928131103516</real>
 						<real>62.453670501708984</real>
 					</array>
 					<array>
-						<real>35.543571472167969</real>
-						<real>41.439868927001953</real>
+						<real>36.349842071533203</real>
+						<real>42.225040435791016</real>
 					</array>
 				</array>
 			</array>

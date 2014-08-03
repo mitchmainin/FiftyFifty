@@ -140,7 +140,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>Wall</string>
+		<string></string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>

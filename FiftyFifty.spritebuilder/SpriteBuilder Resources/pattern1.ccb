@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>13</integer>
+	<integer>16</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -97,7 +97,7 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>obstacle.ccb</string>
+						<string>Wall.ccb</string>
 					</dict>
 				</array>
 			</dict>
@@ -159,7 +159,7 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>obstacle.ccb</string>
+						<string>Wall.ccb</string>
 					</dict>
 				</array>
 			</dict>
@@ -221,7 +221,7 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>obstacle.ccb</string>
+						<string>Wall.ccb</string>
 					</dict>
 				</array>
 			</dict>
@@ -257,8 +257,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>116.21124267578125</real>
-							<real>-46.943996429443359</real>
+							<real>75.21124267578125</real>
+							<real>-41.943996429443359</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -283,9 +283,73 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>Wall.ccb</string>
+						<string>obstacle.ccb</string>
 					</dict>
 				</array>
+			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>13</integer>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCBFile</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>399.40005493164062</real>
+							<real>-41.719985961914062</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>0.21199999749660492</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>obstacle.ccb</string>
+					</dict>
+				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
