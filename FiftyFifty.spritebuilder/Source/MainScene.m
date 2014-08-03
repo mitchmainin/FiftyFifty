@@ -10,7 +10,11 @@
 #import "Player.h"
 #import "Gameover.h"
 
+<<<<<<< HEAD
 static  CGFloat scrollSpeed = 250.f;
+=======
+static  CGFloat scrollSpeed = 200.f;
+>>>>>>> FETCH_HEAD
 
 @implementation MainScene
 {
@@ -37,15 +41,19 @@ static  CGFloat scrollSpeed = 250.f;
 
 -(void) didLoadFromCCB
 {
-   // _physicsNode.debugDraw = YES;
+    //_physicsNode.debugDraw = YES;
     self.userInteractionEnabled = TRUE;
     _physicsNode.collisionDelegate = self;
     _backgrounds = @[_background1, _background2];
     _loadPattern = YES;
     
     [self loadPattern];
+<<<<<<< HEAD
     
     [self loadSavedState];
+=======
+    scrollSpeed = 200.f;
+>>>>>>> FETCH_HEAD
 
 
 }
@@ -82,14 +90,14 @@ static  CGFloat scrollSpeed = 250.f;
 -(BOOL) ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCSprite *)nodeA boundingBox:(CCNode *)nodeB
 {
 
-    return TRUE;
+    return FALSE;
 }
 
 -(BOOL) ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCSprite *)nodeA obstacle:(CCNode *)nodeB
 {
     [nodeA removeFromParent];
     [self doGameOver];
-    return TRUE;
+    return FALSE;
 }
 
 -(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
