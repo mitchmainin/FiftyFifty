@@ -10,7 +10,11 @@
 #import "Player.h"
 #import "Gameover.h"
 
+<<<<<<< HEAD
 static  CGFloat scrollSpeed = 250.f;
+=======
+static  CGFloat scrollSpeed = 200.f;
+>>>>>>> FETCH_HEAD
 
 @implementation MainScene
 {

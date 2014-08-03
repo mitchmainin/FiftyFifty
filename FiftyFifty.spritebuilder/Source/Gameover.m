@@ -10,7 +10,7 @@
 
 @implementation Gameover
 
--(void)play
+-(void)restart
 {
     CCScene *MainScene = [CCBReader loadAsScene:@"MainScene"];
     [[CCDirector sharedDirector] replaceScene:MainScene];
