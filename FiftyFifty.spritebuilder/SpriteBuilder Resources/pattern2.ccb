@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>13</integer>
+	<integer>22</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -41,7 +41,7 @@
 		<array>
 			<dict>
 				<key>UUID</key>
-				<integer>2</integer>
+				<integer>12</integer>
 				<key>baseClass</key>
 				<string>CCBFile</string>
 				<key>children</key>
@@ -72,7 +72,7 @@
 						<key>value</key>
 						<array>
 							<real>0.29971837997436523</real>
-							<real>0.36875006556510925</real>
+							<real>0.36800000071525574</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -103,7 +103,7 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>3</integer>
+				<integer>15</integer>
 				<key>baseClass</key>
 				<string>CCBFile</string>
 				<key>children</key>
@@ -134,7 +134,7 @@
 						<key>value</key>
 						<array>
 							<real>0.81999999284744263</real>
-							<real>0.36875006556510925</real>
+							<real>0.36800000071525574</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -165,7 +165,7 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>6</integer>
+				<integer>18</integer>
 				<key>baseClass</key>
 				<string>CCBFile</string>
 				<key>children</key>
@@ -196,7 +196,7 @@
 						<key>value</key>
 						<array>
 							<real>0.56000000238418579</real>
-							<real>0.36875006556510925</real>
+							<real>0.36800000071525574</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -227,7 +227,7 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>12</integer>
+				<integer>21</integer>
 				<key>baseClass</key>
 				<string>CCBFile</string>
 				<key>children</key>
@@ -257,8 +257,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>116.21124267578125</real>
-							<real>-46.943996429443359</real>
+							<real>262.40005493164062</real>
+							<real>-42.719985961914062</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -434,7 +434,7 @@
 		</dict>
 	</array>
 	<key>stageBorder</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>stageColor</key>
 	<integer>0</integer>
 </dict>
