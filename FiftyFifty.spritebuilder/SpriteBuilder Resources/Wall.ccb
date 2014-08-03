@@ -10,7 +10,11 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
+<<<<<<< HEAD
 	<integer>5</integer>
+=======
+	<integer>3</integer>
+>>>>>>> FETCH_HEAD
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -41,17 +45,127 @@
 		<array>
 			<dict>
 				<key>UUID</key>
+<<<<<<< HEAD
 				<integer>4</integer>
 				<key>baseClass</key>
 				<string>CCSprite</string>
+=======
+				<integer>2</integer>
+				<key>baseClass</key>
+				<string>CCPhysicsNode</string>
+>>>>>>> FETCH_HEAD
 				<key>children</key>
-				<array/>
+				<array>
+					<dict>
+						<key>UUID</key>
+						<integer>1</integer>
+						<key>baseClass</key>
+						<string>CCNodeColor</string>
+						<key>children</key>
+						<array/>
+						<key>customClass</key>
+						<string></string>
+						<key>displayName</key>
+						<string>CCNodeColor</string>
+						<key>memberVarAssignmentName</key>
+						<string></string>
+						<key>memberVarAssignmentType</key>
+						<integer>1</integer>
+						<key>properties</key>
+						<array>
+							<dict>
+								<key>name</key>
+								<string>name</string>
+								<key>type</key>
+								<string>StringSimple</string>
+								<key>value</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
+								<key>value</key>
+								<array>
+									<real>-58.999969482421875</real>
+									<real>-145.99996948242188</real>
+									<integer>0</integer>
+									<integer>0</integer>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>contentSize</string>
+								<key>type</key>
+								<string>Size</string>
+								<key>value</key>
+								<array>
+									<real>40</real>
+									<real>400</real>
+									<integer>0</integer>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>anchorPoint</string>
+								<key>type</key>
+								<string>Point</string>
+								<key>value</key>
+								<array>
+									<real>0.0</real>
+									<real>0.0</real>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>scale</string>
+								<key>type</key>
+								<string>ScaleLock</string>
+								<key>value</key>
+								<array>
+									<real>1</real>
+									<real>1</real>
+									<false/>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>color</string>
+								<key>type</key>
+								<string>Color3</string>
+								<key>value</key>
+								<array>
+									<real>1</real>
+									<real>1</real>
+									<real>1</real>
+									<real>1</real>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>opacity</string>
+								<key>type</key>
+								<string>Float</string>
+								<key>value</key>
+								<real>1</real>
+							</dict>
+						</array>
+					</dict>
+				</array>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
+<<<<<<< HEAD
 				<string>object1</string>
+=======
+				<string>CCPhysicsNode</string>
+>>>>>>> FETCH_HEAD
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_physicsNode</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -71,8 +185,13 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
+<<<<<<< HEAD
 							<real>-39.199993133544922</real>
 							<real>53.360000610351562</real>
+=======
+							<real>0.0</real>
+							<real>0.0</real>
+>>>>>>> FETCH_HEAD
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -85,8 +204,15 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
+<<<<<<< HEAD
 							<real>0.5</real>
 							<real>0.5</real>
+=======
+							<real>0.0</real>
+							<real>0.0</real>
+							<integer>0</integer>
+							<integer>0</integer>
+>>>>>>> FETCH_HEAD
 						</array>
 					</dict>
 					<dict>
@@ -115,18 +241,29 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>color</string>
+						<string>gravity</string>
 						<key>type</key>
-						<string>Color3</string>
+						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
+							<real>0.0</real>
+							<real>-100</real>
 						</array>
 					</dict>
+<<<<<<< HEAD
+=======
+					<dict>
+						<key>name</key>
+						<string>sleepTimeThreshold</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.5</real>
+					</dict>
+>>>>>>> FETCH_HEAD
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -264,8 +401,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

@@ -321,8 +321,18 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
+<<<<<<< HEAD
 							<real>103.40005493164062</real>
 							<real>322.280029296875</real>
+=======
+<<<<<<< HEAD
+							<real>103.40005493164062</real>
+							<real>322.280029296875</real>
+=======
+							<real>75.000015258789062</real>
+							<real>-41.999984741210938</real>
+>>>>>>> FETCH_HEAD
+>>>>>>> FETCH_HEAD
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>

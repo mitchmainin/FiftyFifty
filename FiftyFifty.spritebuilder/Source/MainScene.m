@@ -10,7 +10,15 @@
 #import "Player.h"
 #import "Gameover.h"
 
+<<<<<<< HEAD
 static  CGFloat scrollSpeed = 300.f;
+=======
+<<<<<<< HEAD
+static  CGFloat scrollSpeed = 300.f;
+=======
+static  CGFloat scrollSpeed = 250.f;
+>>>>>>> FETCH_HEAD
+>>>>>>> FETCH_HEAD
 
 @implementation MainScene
 {
@@ -38,8 +46,15 @@ static  CGFloat scrollSpeed = 300.f;
 
 -(void) didLoadFromCCB
 {
+<<<<<<< HEAD
    //_physicsNode.debugDraw = YES;
+=======
+<<<<<<< HEAD
+   //_physicsNode.debugDraw = YES;
+=======
+>>>>>>> FETCH_HEAD
     //_physicsNode.debugDraw = YES;
+>>>>>>> FETCH_HEAD
     self.userInteractionEnabled = TRUE;
     _physicsNode.collisionDelegate = self;
     _backgrounds = @[_background1, _background2];
