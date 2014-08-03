@@ -10,7 +10,7 @@
 #import "Player.h"
 #import "Gameover.h"
 
-static  CGFloat scrollSpeed = 200.f;
+static  CGFloat scrollSpeed = 300.f;
 
 @implementation MainScene
 {
@@ -29,7 +29,7 @@ static  CGFloat scrollSpeed = 200.f;
 
 -(void) didLoadFromCCB
 {
-   // _physicsNode.debugDraw = YES;
+   //_physicsNode.debugDraw = YES;
     self.userInteractionEnabled = TRUE;
     _physicsNode.collisionDelegate = self;
     _backgrounds = @[_background1, _background2];
@@ -115,7 +115,7 @@ static  CGFloat scrollSpeed = 200.f;
         
         pattern.positionInPoints = ccp(-119, lastPosition.y);
         [_scroller addChild:pattern];
-        lastPosition = ccp(lastPosition.x , lastPosition.y + pattern.contentSize.height + 2);
+        lastPosition = ccp(lastPosition.x , lastPosition.y + pattern.contentSize.height + 200);
         
         
     }

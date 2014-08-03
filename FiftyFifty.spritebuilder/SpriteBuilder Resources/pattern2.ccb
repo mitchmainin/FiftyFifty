@@ -258,7 +258,7 @@
 						<key>value</key>
 						<array>
 							<real>223.40005493164062</real>
-							<real>-43.719985961914062</real>
+							<real>323.280029296875</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -286,6 +286,8 @@
 						<string>obstacle.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -320,7 +322,7 @@
 						<key>value</key>
 						<array>
 							<real>103.40005493164062</real>
-							<real>-41.719985961914062</real>
+							<real>322.280029296875</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -348,8 +350,6 @@
 						<string>obstacle.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
