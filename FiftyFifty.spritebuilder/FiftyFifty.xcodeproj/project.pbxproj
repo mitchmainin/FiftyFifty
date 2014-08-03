@@ -135,13 +135,10 @@
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
-<<<<<<< HEAD
 				D0760E5D198E040A002D5BC5 /* Player.h */,
 				D0760E5E198E040A002D5BC5 /* Player.m */,
-=======
 				052D6609198E006400EF5655 /* StartScene.h */,
 				052D660A198E006400EF5655 /* StartScene.m */,
->>>>>>> FETCH_HEAD
 			);
 			name = Source;
 			sourceTree = "<group>";
