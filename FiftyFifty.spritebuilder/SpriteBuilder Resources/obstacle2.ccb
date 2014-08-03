@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>2</integer>
+	<integer>5</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -41,7 +41,7 @@
 		<array>
 			<dict>
 				<key>UUID</key>
-				<integer>1</integer>
+				<integer>4</integer>
 				<key>baseClass</key>
 				<string>CCNodeColor</string>
 				<key>children</key>
@@ -85,7 +85,7 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>188</real>
+							<real>40</real>
 							<real>20</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -174,40 +174,40 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>36.349842071533203</real>
-					<real>42.225040435791016</real>
+					<real>35.835319519042969</real>
+					<real>42.08331298828125</real>
 				</array>
 				<array>
-					<real>36.234928131103516</real>
-					<real>62.453670501708984</real>
+					<real>36.056049346923828</real>
+					<real>62.046615600585938</real>
 				</array>
 				<array>
-					<real>224.58001708984375</real>
-					<real>62.479671478271484</real>
+					<real>76.131217956542969</real>
+					<real>62.165016174316406</real>
 				</array>
 				<array>
-					<real>224.451171875</real>
-					<real>42.008026123046875</real>
+					<real>76.257644653320312</real>
+					<real>41.932659149169922</real>
 				</array>
 			</array>
 			<key>polygons</key>
 			<array>
 				<array>
 					<array>
-						<real>224.451171875</real>
-						<real>42.008026123046875</real>
+						<real>76.257644653320312</real>
+						<real>41.932659149169922</real>
 					</array>
 					<array>
-						<real>224.58001708984375</real>
-						<real>62.479671478271484</real>
+						<real>76.131217956542969</real>
+						<real>62.165016174316406</real>
 					</array>
 					<array>
-						<real>36.234928131103516</real>
-						<real>62.453670501708984</real>
+						<real>36.056049346923828</real>
+						<real>62.046615600585938</real>
 					</array>
 					<array>
-						<real>36.349842071533203</real>
-						<real>42.225040435791016</real>
+						<real>35.835319519042969</real>
+						<real>42.08331298828125</real>
 					</array>
 				</array>
 			</array>
