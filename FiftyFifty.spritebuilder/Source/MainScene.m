@@ -10,11 +10,7 @@
 #import "Player.h"
 #import "Gameover.h"
 
-<<<<<<< HEAD
 static  CGFloat scrollSpeed = 250.f;
-=======
-static  CGFloat scrollSpeed = 200.f;
->>>>>>> FETCH_HEAD
 
 @implementation MainScene
 {
@@ -27,6 +23,14 @@ static  CGFloat scrollSpeed = 200.f;
     BOOL _loadPattern;
     CCNode * _pattern;
     BOOL presentedGameOver;
+    float timerTillScrollFaster;
+    
+    CCLabelTTF *_scoreLabel;
+    CCLabelTTF *_highscoreLabel;
+    
+    NSInteger _points;
+    NSInteger _highScore;
+
 
 
 }
@@ -40,6 +44,9 @@ static  CGFloat scrollSpeed = 200.f;
     _loadPattern = YES;
     
     [self loadPattern];
+    
+    [self loadSavedState];
+
 
 }
 
@@ -54,6 +61,8 @@ static  CGFloat scrollSpeed = 200.f;
 }
 
 - (void)update:(CCTime)delta {
+    
+    
     _scroller.position = ccp(_scroller.position.x , _scroller.position.y - (scrollSpeed *delta));
     // loop the ground
     for (CCNode *background in _backgrounds) {
@@ -68,6 +77,7 @@ static  CGFloat scrollSpeed = 200.f;
         scrollSpeed += 3* delta;
 
     }
+    
 }
 -(BOOL) ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCSprite *)nodeA boundingBox:(CCNode *)nodeB
 {
@@ -132,6 +142,53 @@ static  CGFloat scrollSpeed = 200.f;
         
     }
     
+    
+}
+
+-(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair player:(CCNode *)player goal:(CCNode *)goal
+{
+    [goal removeFromParent];
+    _points++;
+    _scoreLabel.string = [NSString stringWithFormat:@"%d", (int)_points];
+    [self saveStatescore ];
+    [self loadSavedStatescore];
+    if (_points > _highScore)
+    {
+        _highScore = _points;
+    }
+    
+    
+    // first save your state
+    [self saveState];
+    [self loadSavedState];
+    
+    return false;
+}
+- (void)saveStatescore {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setInteger:_points forKey:@"points"];
+    [prefs synchronize];
+}
+
+
+
+- (void)loadSavedStatescore {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    _points = [prefs integerForKey:@"points"];
+}
+
+
+
+- (void)saveState {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setInteger:_highScore forKey:@"highScore"];
+    [prefs synchronize];
+}
+
+- (void)loadSavedState {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    _highScore = [prefs integerForKey:@"highScore"];
+    _highscoreLabel.string = [NSString stringWithFormat:@"%ld",(long)_highScore];
     
 }
 

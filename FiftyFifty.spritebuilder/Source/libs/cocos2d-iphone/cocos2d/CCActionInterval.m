@@ -97,9 +97,9 @@
 					  )
 	 ];
 }
-
 -(void) startWithTarget:(id)aTarget
 {
+    
 	[super startWithTarget:aTarget];
 	_elapsed = 0.0f;
 	_firstTick = YES;
