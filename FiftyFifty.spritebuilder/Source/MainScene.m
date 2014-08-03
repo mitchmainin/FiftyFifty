@@ -10,7 +10,7 @@
 #import "Player.h"
 #import "Gameover.h"
 
-static  CGFloat scrollSpeed = 250.f;
+static  CGFloat scrollSpeed = 300.f;
 
 @implementation MainScene
 {
@@ -31,12 +31,14 @@ static  CGFloat scrollSpeed = 250.f;
     NSInteger _points;
     NSInteger _highScore;
 
+    CCSprite *_wall;
 
 
 }
 
 -(void) didLoadFromCCB
 {
+   //_physicsNode.debugDraw = YES;
     //_physicsNode.debugDraw = YES;
     self.userInteractionEnabled = TRUE;
     _physicsNode.collisionDelegate = self;
@@ -47,6 +49,7 @@ static  CGFloat scrollSpeed = 250.f;
     
     [self loadSavedState];
     scrollSpeed = 200.f;
+    [_physicsNode addChild: _wall];
 
 
 }
@@ -86,6 +89,8 @@ static  CGFloat scrollSpeed = 250.f;
     return FALSE;
 }
 
+
+
 -(BOOL) ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCSprite *)nodeA obstacle:(CCNode *)nodeB
 {
     [nodeA removeFromParent];
@@ -115,7 +120,7 @@ static  CGFloat scrollSpeed = 250.f;
     CCNode *pattern;
     
     for (int i =1 ; i <= 50; i++) {
-        int random = arc4random() % 4;
+        int random = arc4random() % 2;
         NSLog(@"%i",random);
         switch (random) {
                 
@@ -126,19 +131,12 @@ static  CGFloat scrollSpeed = 250.f;
                 pattern = [CCBReader load:@"pattern2"];
                 break;
                 
-            case 2:
-                pattern = [CCBReader load:@"pattern3"];
-                break;
-                
-            case 3:
-                pattern = [CCBReader load:@"pattern4"];
-                break;
 
         }
         
         pattern.positionInPoints = ccp(-119, lastPosition.y);
         [_scroller addChild:pattern];
-        lastPosition = ccp(lastPosition.x , lastPosition.y + pattern.contentSize.height + 2);
+        lastPosition = ccp(lastPosition.x , lastPosition.y + pattern.contentSize.height + 200);
         
         
     }
