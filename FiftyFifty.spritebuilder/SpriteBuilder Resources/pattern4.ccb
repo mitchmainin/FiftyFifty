@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>23</integer>
+	<integer>20</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -264,7 +264,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>111.57124328613281</real>
+									<real>223.771240234375</real>
 									<real>-41.943996429443359</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -293,8 +293,6 @@
 								<string>obstacle.ccb</string>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -328,7 +326,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>425.080078125</real>
+									<real>107.08007049560547</real>
 									<real>-41.719985961914062</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -390,7 +388,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>92.680068969726562</real>
+									<real>194.68006896972656</real>
 									<real>-41.719985961914062</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -419,6 +417,8 @@
 								<string>obstacle.ccb</string>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>

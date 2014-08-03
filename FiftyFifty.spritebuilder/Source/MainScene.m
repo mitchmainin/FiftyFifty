@@ -10,7 +10,7 @@
 #import "Player.h"
 #import "Gameover.h"
 
-static  CGFloat scrollSpeed = 300.f;
+static  CGFloat scrollSpeed = 250.f;
 
 @implementation MainScene
 {
@@ -100,8 +100,8 @@ static  CGFloat scrollSpeed = 300.f;
     CCNode *pattern;
     
     for (int i =1 ; i <= 50; i++) {
-        int random = arc4random() % 2;
-        //NSLog(@"%i",random);
+        int random = arc4random() % 4;
+        NSLog(@"%i",random);
         switch (random) {
                 
             case 0:
@@ -109,6 +109,14 @@ static  CGFloat scrollSpeed = 300.f;
                 break;
             case 1:
                 pattern = [CCBReader load:@"pattern2"];
+                break;
+                
+            case 2:
+                pattern = [CCBReader load:@"pattern3"];
+                break;
+                
+            case 3:
+                pattern = [CCBReader load:@"pattern4"];
                 break;
 
         }
