@@ -10,4 +10,10 @@
 
 @implementation MainScene
 
+-(void)restart
+{
+    CCScene *MainScene = [CCBReader loadAsScene:@"MainScene"];
+    [[CCDirector sharedDirector] replaceScene:MainScene];
+
+}
 @end
