@@ -10,7 +10,11 @@
 #import "Player.h"
 #import "Gameover.h"
 
+<<<<<<< HEAD
 static  CGFloat scrollSpeed = 300.f;
+=======
+static  CGFloat scrollSpeed = 250.f;
+>>>>>>> FETCH_HEAD
 
 @implementation MainScene
 {
@@ -23,19 +27,35 @@ static  CGFloat scrollSpeed = 300.f;
     BOOL _loadPattern;
     CCNode * _pattern;
     BOOL presentedGameOver;
+    float timerTillScrollFaster;
+    
+    CCLabelTTF *_scoreLabel;
+    CCLabelTTF *_highscoreLabel;
+    
+    NSInteger _points;
+    NSInteger _highScore;
+
 
 
 }
 
 -(void) didLoadFromCCB
 {
+<<<<<<< HEAD
    //_physicsNode.debugDraw = YES;
+=======
+    //_physicsNode.debugDraw = YES;
+>>>>>>> FETCH_HEAD
     self.userInteractionEnabled = TRUE;
     _physicsNode.collisionDelegate = self;
     _backgrounds = @[_background1, _background2];
     _loadPattern = YES;
     
     [self loadPattern];
+    
+    [self loadSavedState];
+    scrollSpeed = 200.f;
+
 
 }
 
@@ -50,6 +70,8 @@ static  CGFloat scrollSpeed = 300.f;
 }
 
 - (void)update:(CCTime)delta {
+    
+    
     _scroller.position = ccp(_scroller.position.x , _scroller.position.y - (scrollSpeed *delta));
     // loop the ground
     for (CCNode *background in _backgrounds) {
@@ -64,18 +86,19 @@ static  CGFloat scrollSpeed = 300.f;
         scrollSpeed += 3* delta;
 
     }
+    
 }
 -(BOOL) ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCSprite *)nodeA boundingBox:(CCNode *)nodeB
 {
 
-    return TRUE;
+    return FALSE;
 }
 
 -(BOOL) ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCSprite *)nodeA obstacle:(CCNode *)nodeB
 {
     [nodeA removeFromParent];
     [self doGameOver];
-    return TRUE;
+    return FALSE;
 }
 
 -(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
@@ -100,8 +123,8 @@ static  CGFloat scrollSpeed = 300.f;
     CCNode *pattern;
     
     for (int i =1 ; i <= 50; i++) {
-        int random = arc4random() % 2;
-        //NSLog(@"%i",random);
+        int random = arc4random() % 4;
+        NSLog(@"%i",random);
         switch (random) {
                 
             case 0:
@@ -109,6 +132,14 @@ static  CGFloat scrollSpeed = 300.f;
                 break;
             case 1:
                 pattern = [CCBReader load:@"pattern2"];
+                break;
+                
+            case 2:
+                pattern = [CCBReader load:@"pattern3"];
+                break;
+                
+            case 3:
+                pattern = [CCBReader load:@"pattern4"];
                 break;
 
         }
@@ -120,6 +151,53 @@ static  CGFloat scrollSpeed = 300.f;
         
     }
     
+    
+}
+
+-(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair player:(CCNode *)player goal:(CCNode *)goal
+{
+    [goal removeFromParent];
+    _points++;
+    _scoreLabel.string = [NSString stringWithFormat:@"%d", (int)_points];
+    [self saveStatescore ];
+    [self loadSavedStatescore];
+    if (_points > _highScore)
+    {
+        _highScore = _points;
+    }
+    
+    
+    // first save your state
+    [self saveState];
+    [self loadSavedState];
+    
+    return false;
+}
+- (void)saveStatescore {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setInteger:_points forKey:@"points"];
+    [prefs synchronize];
+}
+
+
+
+- (void)loadSavedStatescore {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    _points = [prefs integerForKey:@"points"];
+}
+
+
+
+- (void)saveState {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setInteger:_highScore forKey:@"highScore"];
+    [prefs synchronize];
+}
+
+- (void)loadSavedState {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    _highScore = [prefs integerForKey:@"highScore"];
+    _highscoreLabel.string = [NSString stringWithFormat:@"%ld",(long)_highScore];
     
 }
 
