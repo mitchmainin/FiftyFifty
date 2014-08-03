@@ -41,4 +41,10 @@
     player.position = ccp(touchLocation.x, player.position.y);
 }
 
+-(void)restart
+{
+    CCScene *MainScene = [CCBReader loadAsScene:@"MainScene"];
+    [[CCDirector sharedDirector] replaceScene:MainScene];
+
+}
 @end
