@@ -71,13 +71,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-<<<<<<< HEAD
 							<real>465.12002563476562</real>
 							<real>129.60000610351562</real>
-=======
-							<real>75.21124267578125</real>
-							<real>322.05599975585938</real>
->>>>>>> FETCH_HEAD
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -105,70 +100,6 @@
 						<string>Wall.ccb</string>
 					</dict>
 				</array>
-			</dict>
-			<dict>
-				<key>UUID</key>
-				<integer>13</integer>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>CCBFile</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>399.40005493164062</real>
-							<real>323.280029296875</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>0.21199999749660492</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>obstacle.ccb</string>
-					</dict>
-				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -264,18 +195,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-<<<<<<< HEAD
 							<real>318.24002075195312</real>
 							<real>129.60000610351562</real>
-=======
-<<<<<<< HEAD
-							<real>399.40005493164062</real>
-							<real>323.280029296875</real>
-=======
-							<real>371.00006103515625</real>
-							<real>-41.999984741210938</real>
->>>>>>> FETCH_HEAD
->>>>>>> FETCH_HEAD
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -336,8 +257,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>75.21124267578125</real>
-							<real>322.05599975585938</real>
+							<real>88.716514587402344</real>
+							<real>316.89566040039062</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -365,6 +286,8 @@
 						<string>obstacle.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

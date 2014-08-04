@@ -59,6 +59,9 @@
 
 - (CCScene*) startScene
 {
+    OALSimpleAudio *audio = [OALSimpleAudio sharedInstance];
+    [audio preloadEffect:@"techno.wav"];
+    [audio playBg:@"techno.wav" loop:TRUE];
     return [CCBReader loadAsScene:@"StartScene"];
 }
 

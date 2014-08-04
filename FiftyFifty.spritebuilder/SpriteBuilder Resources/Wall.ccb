@@ -10,11 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-<<<<<<< HEAD
-	<integer>5</integer>
-=======
-	<integer>3</integer>
->>>>>>> FETCH_HEAD
+	<integer>8</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -45,127 +41,17 @@
 		<array>
 			<dict>
 				<key>UUID</key>
-<<<<<<< HEAD
-				<integer>4</integer>
+				<integer>7</integer>
 				<key>baseClass</key>
-				<string>CCSprite</string>
-=======
-				<integer>2</integer>
-				<key>baseClass</key>
-				<string>CCPhysicsNode</string>
->>>>>>> FETCH_HEAD
+				<string>CCNodeColor</string>
 				<key>children</key>
-				<array>
-					<dict>
-						<key>UUID</key>
-						<integer>1</integer>
-						<key>baseClass</key>
-						<string>CCNodeColor</string>
-						<key>children</key>
-						<array/>
-						<key>customClass</key>
-						<string></string>
-						<key>displayName</key>
-						<string>CCNodeColor</string>
-						<key>memberVarAssignmentName</key>
-						<string></string>
-						<key>memberVarAssignmentType</key>
-						<integer>1</integer>
-						<key>properties</key>
-						<array>
-							<dict>
-								<key>name</key>
-								<string>name</string>
-								<key>type</key>
-								<string>StringSimple</string>
-								<key>value</key>
-								<string></string>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>position</string>
-								<key>type</key>
-								<string>Position</string>
-								<key>value</key>
-								<array>
-									<real>-58.999969482421875</real>
-									<real>-145.99996948242188</real>
-									<integer>0</integer>
-									<integer>0</integer>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>contentSize</string>
-								<key>type</key>
-								<string>Size</string>
-								<key>value</key>
-								<array>
-									<real>40</real>
-									<real>400</real>
-									<integer>0</integer>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>anchorPoint</string>
-								<key>type</key>
-								<string>Point</string>
-								<key>value</key>
-								<array>
-									<real>0.0</real>
-									<real>0.0</real>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>scale</string>
-								<key>type</key>
-								<string>ScaleLock</string>
-								<key>value</key>
-								<array>
-									<real>1</real>
-									<real>1</real>
-									<false/>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>color</string>
-								<key>type</key>
-								<string>Color3</string>
-								<key>value</key>
-								<array>
-									<real>1</real>
-									<real>1</real>
-									<real>1</real>
-									<real>1</real>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>opacity</string>
-								<key>type</key>
-								<string>Float</string>
-								<key>value</key>
-								<real>1</real>
-							</dict>
-						</array>
-					</dict>
-				</array>
+				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-<<<<<<< HEAD
-				<string>object1</string>
-=======
-				<string>CCPhysicsNode</string>
->>>>>>> FETCH_HEAD
+				<string>CCNodeColor</string>
 				<key>memberVarAssignmentName</key>
-				<string>_physicsNode</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -185,14 +71,22 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-<<<<<<< HEAD
-							<real>-39.199993133544922</real>
-							<real>53.360000610351562</real>
-=======
-							<real>0.0</real>
-							<real>0.0</real>
->>>>>>> FETCH_HEAD
+							<real>-59.039997100830078</real>
+							<real>-207.36001586914062</real>
 							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>contentSize</string>
+						<key>type</key>
+						<string>Size</string>
+						<key>value</key>
+						<array>
+							<real>40</real>
+							<real>500</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -204,15 +98,8 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-<<<<<<< HEAD
-							<real>0.5</real>
-							<real>0.5</real>
-=======
 							<real>0.0</real>
 							<real>0.0</real>
-							<integer>0</integer>
-							<integer>0</integer>
->>>>>>> FETCH_HEAD
 						</array>
 					</dict>
 					<dict>
@@ -222,123 +109,46 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1.1299999952316284</real>
-							<real>11.399999618530273</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>spriteFrame</string>
+						<string>color</string>
 						<key>type</key>
-						<string>SpriteFrame</string>
+						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<string></string>
-							<string>ccbResources/object1.png</string>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
 						</array>
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>gravity</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>-100</real>
-						</array>
-					</dict>
-<<<<<<< HEAD
-=======
-					<dict>
-						<key>name</key>
-						<string>sleepTimeThreshold</string>
+						<string>opacity</string>
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
-						<real>0.5</real>
+						<real>1</real>
 					</dict>
->>>>>>> FETCH_HEAD
 				</array>
 				<key>selected</key>
 				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string></string>
+		<string>Wall</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
-		<string>_wall</string>
+		<string></string>
 		<key>memberVarAssignmentType</key>
-		<integer>1</integer>
-		<key>physicsBody</key>
-		<dict>
-			<key>affectedByGravity</key>
-			<true/>
-			<key>allowsRotation</key>
-			<true/>
-			<key>bodyShape</key>
-			<integer>0</integer>
-			<key>collisionCategories</key>
-			<array/>
-			<key>collisionMask</key>
-			<array/>
-			<key>collisionType</key>
-			<string></string>
-			<key>cornerRadius</key>
-			<real>0.0</real>
-			<key>density</key>
-			<real>1</real>
-			<key>dynamic</key>
-			<false/>
-			<key>elasticity</key>
-			<real>0.30000001192092896</real>
-			<key>friction</key>
-			<real>0.30000001192092896</real>
-			<key>points</key>
-			<array>
-				<array>
-					<real>-58.809375762939453</real>
-					<real>-145.29376220703125</real>
-				</array>
-				<array>
-					<real>-56.868751525878906</real>
-					<real>255.45938110351562</real>
-				</array>
-				<array>
-					<real>-21.352500915527344</real>
-					<real>254.01937866210938</real>
-				</array>
-				<array>
-					<real>-18.472499847412109</real>
-					<real>-145.86750793457031</real>
-				</array>
-			</array>
-			<key>polygons</key>
-			<array>
-				<array>
-					<array>
-						<real>-18.472499847412109</real>
-						<real>-145.86750793457031</real>
-					</array>
-					<array>
-						<real>-21.352500915527344</real>
-						<real>254.01937866210938</real>
-					</array>
-					<array>
-						<real>-56.868751525878906</real>
-						<real>255.45938110351562</real>
-					</array>
-					<array>
-						<real>-58.809375762939453</real>
-						<real>-145.29376220703125</real>
-					</array>
-				</array>
-			</array>
-		</dict>
+		<integer>2</integer>
 		<key>properties</key>
 		<array>
 			<dict>

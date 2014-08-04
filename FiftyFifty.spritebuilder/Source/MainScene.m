@@ -9,16 +9,10 @@
 #import "MainScene.h"
 #import "Player.h"
 #import "Gameover.h"
+#import "CCPhysics+ObjectiveChipmunk.h"
 
-<<<<<<< HEAD
-static  CGFloat scrollSpeed = 300.f;
-=======
-<<<<<<< HEAD
-static  CGFloat scrollSpeed = 300.f;
-=======
-static  CGFloat scrollSpeed = 250.f;
->>>>>>> FETCH_HEAD
->>>>>>> FETCH_HEAD
+
+static  CGFloat scrollSpeed = 500.f;
 
 @implementation MainScene
 {
@@ -40,21 +34,21 @@ static  CGFloat scrollSpeed = 250.f;
     NSInteger _highScore;
 
     CCSprite *_wall;
-
+    
+//    BOOL _touchedWall;
+//    BOOL _collidedFromRightSide;
+    
+    float _timeSinceObstacle;
+    CCLabelTTF *_instructions;
+    
+    BOOL _gameOver;
 
 }
 
 -(void) didLoadFromCCB
 {
-<<<<<<< HEAD
-   //_physicsNode.debugDraw = YES;
-=======
-<<<<<<< HEAD
-   //_physicsNode.debugDraw = YES;
-=======
->>>>>>> FETCH_HEAD
     //_physicsNode.debugDraw = YES;
->>>>>>> FETCH_HEAD
+    //_physicsNode.debugDraw = YES;
     self.userInteractionEnabled = TRUE;
     _physicsNode.collisionDelegate = self;
     _backgrounds = @[_background1, _background2];
@@ -63,21 +57,34 @@ static  CGFloat scrollSpeed = 250.f;
     [self loadPattern];
     
     [self loadSavedState];
-    scrollSpeed = 200.f;
-    [_physicsNode addChild: _wall];
+    scrollSpeed = 500.f;
+    
+    _timeSinceObstacle = 0.0f;
+    
+    [[CCDirector sharedDirector] pause];
+    
 
+    [self playBG];
+    
 
 }
 
 -(void) doGameOver
 {
 //    [[GameState sharedInstance] setCurrentScore:points];
-    
+//    CCSprite *explosion = (CCSprite *)[CCBReader load:@"particleEffect"];
+//    // explosion.autoRemoveOnFinish = TRUE;
+//    explosion.position = [player convertToWorldSpace:ccp(50, 31)];
+//    [player.parent addChild:explosion];
+//    //  _gun.visible = NO;
+//    player.physicsBody.collisionCategories = @[];
     [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"GameOver"]];
     presentedGameOver = YES;
     // [[CCDirector sharedDirector] pause];
     // [[[CCDirector sharedDirector] responderManager] removeAllResponders];
 }
+
+
 
 - (void)update:(CCTime)delta {
     
@@ -93,35 +100,77 @@ static  CGFloat scrollSpeed = 250.f;
         if (backgroundScreenPosition.y <= (-.5*background.contentSize.height*background.scaleY)) {
             background.position = ccp(background.position.x, background.position.y + 2 * background.contentSize.height * background.scaleY);
         }
-        scrollSpeed += 3* delta;
+        scrollSpeed += 2.2* delta;
 
     }
+    // Increment the time since the last obstacle was added
+    _timeSinceObstacle += delta; // delta is approximately 1/60th of a second
+    
+    // Check to see if two seconds have passed
+    if (_timeSinceObstacle > 0.25f)
+    {
+        // Add a new obstacle
+        [self loadPattern];
+        
+        // Then reset the timer.
+        _timeSinceObstacle = 0.0f;
+        
+    }
+    
+
     
 }
+
+-(void)playBG
+{
+    OALSimpleAudio *audio = [OALSimpleAudio sharedInstance];
+    [audio playBg:@"techno.wav" loop:TRUE];
+}
+
+
 -(BOOL) ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCSprite *)nodeA boundingBox:(CCNode *)nodeB
 {
 
     return FALSE;
 }
-
+//-(BOOL) ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCSprite *)nodeA test:(CCNode *)nodeB
+//{
+//
+//    
+//    _touchedWall = true;
+//    if((nodeB.position.x-nodeA.position.x)>0.0)
+//    {
+//        _collidedFromRightSide = false;
+//    }
+//    else
+//    {
+//        _collidedFromRightSide = true;
+//    }
+//    return FALSE;
+//}
 
 
 -(BOOL) ccPhysicsCollisionPreSolve:(CCPhysicsCollisionPair *)pair player:(CCSprite *)nodeA obstacle:(CCNode *)nodeB
 {
     [nodeA removeFromParent];
-    [self doGameOver];
+    if (!_gameOver) {
+        [self doGameOver];
+    }
+    _gameOver = TRUE;
     return FALSE;
 }
 
 -(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    
+    _instructions.visible = FALSE;
+    [[CCDirector sharedDirector] resume];
 }
 
 -(void) touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    CGPoint touchLocation = [touch locationInNode:self];
-    player.position = ccp(touchLocation.x, player.position.y);
+           CGPoint touchLocation = [touch locationInNode:self];
+     player.position = ccp(touchLocation.x, player.position.y);
+
 }
 
 
@@ -133,8 +182,9 @@ static  CGFloat scrollSpeed = 250.f;
     CGPoint lastPosition = [_scroller convertToNodeSpace:screenPosition];
     
     CCNode *pattern;
+
     
-    for (int i =1 ; i <= 50; i++) {
+    
         int random = arc4random() % 2;
         NSLog(@"%i",random);
         switch (random) {
@@ -149,12 +199,13 @@ static  CGFloat scrollSpeed = 250.f;
 
         }
         
-        pattern.positionInPoints = ccp(-119, lastPosition.y);
+        pattern.positionInPoints = ccp(-119, lastPosition.y+290);
         [_scroller addChild:pattern];
-        lastPosition = ccp(lastPosition.x , lastPosition.y + pattern.contentSize.height + 200);
+
+        lastPosition = ccp(lastPosition.x , lastPosition.y + pattern.contentSize.height);
         
         
-    }
+    
     
     
 }

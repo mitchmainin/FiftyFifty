@@ -7,14 +7,16 @@
 //
 
 #import "Player.h"
+#import "CCEffectPixellate.h"
 
 @implementation Player
 
 -(void) didLoadFromCCB
 {
     self.physicsBody.collisionType = @"player";
-}
+   // self.effect = [CCEffectPixellate effectWithBlockSize: 4];
 
+}
 
 
 @end

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		052D660B198E006400EF5655 /* StartScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 052D660A198E006400EF5655 /* StartScene.m */; };
+		052D6619198E73BF00EF5655 /* Wall.m in Sources */ = {isa = PBXBuildFile; fileRef = 052D6618198E73BF00EF5655 /* Wall.m */; };
+		052D661E198EB02600EF5655 /* button.wav in Resources */ = {isa = PBXBuildFile; fileRef = 052D661D198EB02600EF5655 /* button.wav */; };
+		052D6621198EB53500EF5655 /* techno.wav in Resources */ = {isa = PBXBuildFile; fileRef = 052D6620198EB53500EF5655 /* techno.wav */; };
+		052D6628198EC18300EF5655 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 052D6627198EC18300EF5655 /* Images.xcassets */; };
 		087FF3A7198E38960042EAED /* goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 087FF3A6198E38960042EAED /* goal.m */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
@@ -62,6 +66,11 @@
 /* Begin PBXFileReference section */
 		052D6609198E006400EF5655 /* StartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScene.h; sourceTree = "<group>"; };
 		052D660A198E006400EF5655 /* StartScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScene.m; sourceTree = "<group>"; };
+		052D6617198E73BF00EF5655 /* Wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Wall.h; path = Source/Wall.h; sourceTree = "<group>"; };
+		052D6618198E73BF00EF5655 /* Wall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Wall.m; path = Source/Wall.m; sourceTree = "<group>"; };
+		052D661D198EB02600EF5655 /* button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button.wav; sourceTree = "<group>"; };
+		052D6620198EB53500EF5655 /* techno.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = techno.wav; sourceTree = "<group>"; };
+		052D6627198EC18300EF5655 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FiftyFifty/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		087FF3A5198E38960042EAED /* goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = goal.h; path = Source/goal.h; sourceTree = "<group>"; };
 		087FF3A6198E38960042EAED /* goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = goal.m; path = Source/goal.m; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -141,6 +150,8 @@
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
+				052D6617198E73BF00EF5655 /* Wall.h */,
+				052D6618198E73BF00EF5655 /* Wall.m */,
 				087FF3A5198E38960042EAED /* goal.h */,
 				087FF3A6198E38960042EAED /* goal.m */,
 				D0760E6A198E263E002D5BC5 /* Gameover.h */,
@@ -223,6 +234,9 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				052D6627198EC18300EF5655 /* Images.xcassets */,
+				052D6620198EB53500EF5655 /* techno.wav */,
+				052D661D198EB02600EF5655 /* button.wav */,
 				B73789911807667A0076A88C /* Icons */,
 				B737893A180761570076A88C /* Published-iOS */,
 			);
@@ -326,6 +340,9 @@
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
+				052D6621198EB53500EF5655 /* techno.wav in Resources */,
+				052D6628198EC18300EF5655 /* Images.xcassets in Resources */,
+				052D661E198EB02600EF5655 /* button.wav in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
@@ -361,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0760E5F198E040A002D5BC5 /* Player.m in Sources */,
+				052D6619198E73BF00EF5655 /* Wall.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
@@ -426,6 +444,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -460,6 +480,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

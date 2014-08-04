@@ -21,9 +21,16 @@
 
 -(void)restart
 {
+    [self playEffect];
     CCScene *MainScene = [CCBReader loadAsScene:@"MainScene"];
     [[CCDirector sharedDirector] replaceScene:MainScene];
     
+}
+
+-(void) playEffect
+{
+    OALSimpleAudio *audio = [OALSimpleAudio sharedInstance];
+    [audio playEffect:@"button.wav"];
 }
 
 

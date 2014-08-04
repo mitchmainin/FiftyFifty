@@ -7,15 +7,18 @@
 //
 
 #import "StartScene.h"
-
+#import "MainScene.h"
 @implementation StartScene
 
-- (void)play
+-(void)play
 {
+//    OALSimpleAudio *audio = [OALSimpleAudio sharedInstance];
+//    [audio preloadEffect:@"button.wav"];
+//   // [audio preloadEffect:@""];
+//    [audio playEffect:@"button.wav"];
     CCScene *MainScene = [CCBReader loadAsScene:@"MainScene"];
     [[CCDirector sharedDirector] replaceScene:MainScene];
-    NSLog(@"CLicked");
-
+    NSLog(@"clicked");
 }
 
 @end

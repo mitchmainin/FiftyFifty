@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>2</integer>
+	<integer>4</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -50,9 +50,9 @@
 		<key>physicsBody</key>
 		<dict>
 			<key>affectedByGravity</key>
-			<false/>
+			<true/>
 			<key>allowsRotation</key>
-			<false/>
+			<true/>
 			<key>bodyShape</key>
 			<integer>0</integer>
 			<key>collisionCategories</key>
@@ -60,7 +60,7 @@
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>
-			<string>player</string>
+			<string></string>
 			<key>cornerRadius</key>
 			<real>0.0</real>
 			<key>density</key>
@@ -74,40 +74,40 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>12.148338317871094</real>
-					<real>11.796211242675781</real>
+					<real>4.059302806854248</real>
+					<real>18.111911773681641</real>
 				</array>
 				<array>
-					<real>12.462305068969727</real>
-					<real>45.981536865234375</real>
+					<real>4.4463105201721191</real>
+					<real>47.702198028564453</real>
 				</array>
 				<array>
-					<real>46.3074951171875</real>
-					<real>46.113445281982422</real>
+					<real>32.379547119140625</real>
+					<real>47.993270874023438</real>
 				</array>
 				<array>
-					<real>45.869247436523438</real>
-					<real>11.380859375</real>
+					<real>33.070713043212891</real>
+					<real>18.512001037597656</real>
 				</array>
 			</array>
 			<key>polygons</key>
 			<array>
 				<array>
 					<array>
-						<real>45.869247436523438</real>
-						<real>11.380859375</real>
+						<real>33.070713043212891</real>
+						<real>18.512001037597656</real>
 					</array>
 					<array>
-						<real>46.3074951171875</real>
-						<real>46.113445281982422</real>
+						<real>32.379547119140625</real>
+						<real>47.993270874023438</real>
 					</array>
 					<array>
-						<real>12.462305068969727</real>
-						<real>45.981536865234375</real>
+						<real>4.4463105201721191</real>
+						<real>47.702198028564453</real>
 					</array>
 					<array>
-						<real>12.148338317871094</real>
-						<real>11.796211242675781</real>
+						<real>4.059302806854248</real>
+						<real>18.111911773681641</real>
 					</array>
 				</array>
 			</array>
@@ -143,8 +143,8 @@
 				<string>Point</string>
 				<key>value</key>
 				<array>
-					<real>0.5</real>
-					<real>0.5</real>
+					<real>0.31427556276321411</real>
+					<real>0.60404831171035767</real>
 				</array>
 			</dict>
 			<dict>
@@ -168,7 +168,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>ccbResources/NeanSquareBlue.png</string>
+					<string>ccbResources/SquareRed.png</string>
 				</array>
 			</dict>
 			<dict>
