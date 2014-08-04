@@ -42,6 +42,8 @@ static  CGFloat scrollSpeed = 500.f;
     CCLabelTTF *_instructions;
     
     BOOL _gameOver;
+    CCNodeColor *_bottomFloor;
+    
 
 }
 
@@ -163,6 +165,8 @@ static  CGFloat scrollSpeed = 500.f;
 -(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     _instructions.visible = FALSE;
+    _bottomFloor.visible = FALSE;
+
     [[CCDirector sharedDirector] resume];
 }
 
@@ -212,8 +216,14 @@ static  CGFloat scrollSpeed = 500.f;
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair player:(CCNode *)player goal:(CCNode *)goal
 {
+
     [goal removeFromParent];
     _points++;
+    CCSprite *explosion = (CCSprite *)[CCBReader load:@"particleEffect"];
+    // explosion.autoRemoveOnFinish = TRUE;
+    explosion.position = _scoreLabel.positionInPoints;
+    [_scoreLabel.parent addChild:explosion];
+    //player.physicsBody.collisionCategories = @[];
     _scoreLabel.string = [NSString stringWithFormat:@"%d", (int)_points];
     [self saveStatescore ];
     [self loadSavedStatescore];
