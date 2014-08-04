@@ -10,6 +10,7 @@
 #import "Player.h"
 #import "Gameover.h"
 #import "CCPhysics+ObjectiveChipmunk.h"
+#import "CCEffectGlow.h"
 
 
 static  CGFloat scrollSpeed = 500.f;
@@ -34,6 +35,7 @@ static  CGFloat scrollSpeed = 500.f;
     NSInteger _highScore;
 
     CCSprite *_wall;
+    CCNode *_testicles;
     
 //    BOOL _touchedWall;
 //    BOOL _collidedFromRightSide;
@@ -43,8 +45,13 @@ static  CGFloat scrollSpeed = 500.f;
     
     BOOL _gameOver;
     CCNodeColor *_bottomFloor;
+    CCSprite *_finger;
+    CCNodeColor *_side;
+    CCNodeColor *_side2;
     
-
+    float totalGameTime;
+    
+    bool paused;
 }
 
 -(void) didLoadFromCCB
@@ -59,14 +66,21 @@ static  CGFloat scrollSpeed = 500.f;
     [self loadPattern];
     
     [self loadSavedState];
-    scrollSpeed = 500.f;
+    scrollSpeed = 0.f;
     
     _timeSinceObstacle = 0.0f;
+    totalGameTime = 0;
     
-    [[CCDirector sharedDirector] pause];
+    paused = true;
+    
+    //[[CCDirector sharedDirector] pause];
     
 
     [self playBG];
+    
+    CCAnimationManager* animationManager = _finger.animationManager;
+    // timeline reference for rolling
+    [animationManager runAnimationsForSequenceNamed:@"Timeline"];
     
 
 }
@@ -90,6 +104,14 @@ static  CGFloat scrollSpeed = 500.f;
 
 - (void)update:(CCTime)delta {
     
+    totalGameTime += delta;
+    
+    // FINGER MOVING
+    float centerOfScreen = _instructions.position.x;
+    _finger.position = ccp(cos(totalGameTime * 3) * 70 + centerOfScreen,_finger.position.y);
+    //
+    
+    if (paused) return;
     
     _scroller.position = ccp(_scroller.position.x , _scroller.position.y - (scrollSpeed *delta));
     // loop the ground
@@ -119,7 +141,7 @@ static  CGFloat scrollSpeed = 500.f;
         
     }
     
-
+    
     
 }
 
@@ -156,7 +178,17 @@ static  CGFloat scrollSpeed = 500.f;
 {
     [nodeA removeFromParent];
     if (!_gameOver) {
-        [self doGameOver];
+        CCParticleExplosion *explosion = [[CCParticleExplosion alloc] init];
+        CCSprite *explosionPic = [CCSprite spriteWithImageNamed:@"ccbResources/explosionParticle.png"];
+        explosion.texture = explosionPic.texture;
+        
+        explosion.color = [CCColor redColor];
+        explosion.speed = 150;
+        [explosion setTotalParticles:30];
+        [_testicles addChild:explosion];
+        explosion.position = player.position;
+        scrollSpeed = 0;
+        [self performSelector:@selector(doGameOver) withObject:nil afterDelay:1];
     }
     _gameOver = TRUE;
     return FALSE;
@@ -166,8 +198,26 @@ static  CGFloat scrollSpeed = 500.f;
 {
     _instructions.visible = FALSE;
     _bottomFloor.visible = FALSE;
+    _finger.visible = FALSE;
+    [self performSelector:@selector(side) withObject:nil afterDelay:1];
+    [self performSelector:@selector(side2) withObject:nil afterDelay:1];
 
-    [[CCDirector sharedDirector] resume];
+
+    
+    scrollSpeed = 500.f;
+    paused = false;
+
+    //[[CCDirector sharedDirector] resume];
+}
+
+-(void) side
+{
+    _side.visible = FALSE;
+}
+
+-(void) side2
+{
+    _side2.visible = FALSE;
 }
 
 -(void) touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
@@ -219,11 +269,7 @@ static  CGFloat scrollSpeed = 500.f;
 
     [goal removeFromParent];
     _points++;
-    CCSprite *explosion = (CCSprite *)[CCBReader load:@"particleEffect"];
-    // explosion.autoRemoveOnFinish = TRUE;
-    explosion.position = _scoreLabel.positionInPoints;
-    [_scoreLabel.parent addChild:explosion];
-    //player.physicsBody.collisionCategories = @[];
+//    _obstacle.effect = [CCEffectGlow effectWithBlurStrength:10.0f];
     _scoreLabel.string = [NSString stringWithFormat:@"%d", (int)_points];
     [self saveStatescore ];
     [self loadSavedStatescore];
