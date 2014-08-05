@@ -13,6 +13,7 @@
 		052D6621198EB53500EF5655 /* techno.wav in Resources */ = {isa = PBXBuildFile; fileRef = 052D6620198EB53500EF5655 /* techno.wav */; };
 		052D6628198EC18300EF5655 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 052D6627198EC18300EF5655 /* Images.xcassets */; };
 		087FF3A7198E38960042EAED /* goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 087FF3A6198E38960042EAED /* goal.m */; };
+		087FF3F219904F860042EAED /* credit.m in Sources */ = {isa = PBXBuildFile; fileRef = 087FF3F119904F860042EAED /* credit.m */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -73,6 +74,8 @@
 		052D6627198EC18300EF5655 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FiftyFifty/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		087FF3A5198E38960042EAED /* goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = goal.h; path = Source/goal.h; sourceTree = "<group>"; };
 		087FF3A6198E38960042EAED /* goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = goal.m; path = Source/goal.m; sourceTree = "<group>"; };
+		087FF3F019904F860042EAED /* credit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = credit.h; sourceTree = "<group>"; };
+		087FF3F119904F860042EAED /* credit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = credit.m; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -160,6 +163,8 @@
 				D0760E5E198E040A002D5BC5 /* Player.m */,
 				052D6609198E006400EF5655 /* StartScene.h */,
 				052D660A198E006400EF5655 /* StartScene.m */,
+				087FF3F019904F860042EAED /* credit.h */,
+				087FF3F119904F860042EAED /* credit.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
+				087FF3F219904F860042EAED /* credit.m in Sources */,
 				087FF3A7198E38960042EAED /* goal.m in Sources */,
 				052D660B198E006400EF5655 /* StartScene.m in Sources */,
 				D0760E6C198E263E002D5BC5 /* Gameover.m in Sources */,

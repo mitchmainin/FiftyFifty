@@ -21,4 +21,13 @@
     NSLog(@"clicked");
 }
 
+
+
+-(void)credit
+{
+    CCScene *credit = [CCBReader loadAsScene:@"credit"];
+    [[CCDirector sharedDirector] replaceScene:credit];
+    NSLog(@"clicked");
+}
+
 @end
