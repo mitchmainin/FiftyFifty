@@ -9,6 +9,7 @@
 #import "Player.h"
 #import "CCEffectPixellate.h"
 
+
 @implementation Player
 {
     CCParticleSystem *_particles;
@@ -17,7 +18,7 @@
 -(void) didLoadFromCCB
 {
     self.physicsBody.collisionType = @"player";
-   // self.effect = [CCEffectPixellate effectWithBlockSize: 4];
+//    self.effect = [CCEffectContrast effectWithContrast:100.0f];
     _particles.particlePositionType = CCParticleSystemPositionTypeFree;
 }
 

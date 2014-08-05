@@ -21,10 +21,16 @@
     NSLog(@"clicked");
 }
 
+-(void) playEffect
+{
+    OALSimpleAudio *audio = [OALSimpleAudio sharedInstance];
+    [audio playEffect:@"button.wav"];
+}
 
 
 -(void)credit
 {
+    [self playEffect];
     CCScene *credit = [CCBReader loadAsScene:@"credit"];
     [[CCDirector sharedDirector] replaceScene:credit];
     NSLog(@"clicked");
