@@ -206,6 +206,7 @@ static  CGFloat scrollSpeed = 500.f;
     
     scrollSpeed = 500.f;
     paused = false;
+    
 
     //[[CCDirector sharedDirector] resume];
 }

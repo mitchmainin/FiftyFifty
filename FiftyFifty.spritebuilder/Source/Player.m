@@ -10,12 +10,15 @@
 #import "CCEffectPixellate.h"
 
 @implementation Player
+{
+    CCParticleSystem *_particles;
+}
 
 -(void) didLoadFromCCB
 {
     self.physicsBody.collisionType = @"player";
    // self.effect = [CCEffectPixellate effectWithBlockSize: 4];
-
+    _particles.particlePositionType = CCParticleSystemPositionTypeFree;
 }
 
 
