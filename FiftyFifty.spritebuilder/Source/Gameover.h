@@ -6,8 +6,12 @@
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "CCScene.h"
+#import "CCNode.h"
 
-@interface Gameover : CCScene
+@class MainScene;
+
+@interface Gameover : CCNode
+
+@property (nonatomic, weak) MainScene *mainScene;
 
 @end

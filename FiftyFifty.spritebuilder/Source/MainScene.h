@@ -11,6 +11,7 @@
 @interface MainScene : CCNode <CCPhysicsCollisionDelegate>
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event;
 
+-(void)restart;
 
 
 @end

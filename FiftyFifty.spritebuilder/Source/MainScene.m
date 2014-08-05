@@ -52,6 +52,7 @@ static  CGFloat scrollSpeed = 500.f;
     float totalGameTime;
     
     bool paused;
+    Gameover *_gameOverScreen;
 }
 
 -(void) didLoadFromCCB
@@ -76,11 +77,11 @@ static  CGFloat scrollSpeed = 500.f;
     //[[CCDirector sharedDirector] pause];
     
 
-    [self playBG];
+   // [self playBG];
     
-    CCAnimationManager* animationManager = _finger.animationManager;
-    // timeline reference for rolling
-    [animationManager runAnimationsForSequenceNamed:@"Timeline"];
+//    CCAnimationManager* animationManager = _finger.animationManager;
+//    // timeline reference for rolling
+//    [animationManager runAnimationsForSequenceNamed:@"Timeline"];
     
 
 }
@@ -94,53 +95,75 @@ static  CGFloat scrollSpeed = 500.f;
 //    [player.parent addChild:explosion];
 //    //  _gun.visible = NO;
 //    player.physicsBody.collisionCategories = @[];
-    [[CCDirector sharedDirector] replaceScene: [CCBReader loadAsScene:@"GameOver"]];
+//    [[CCDirector sharedDirector] replaceScene: [CCBReader load:@"GameOver"]];
+
+    _gameOverScreen.mainScene = self;
+    CCAnimationManager* animationManager = self.animationManager;
+    [animationManager runAnimationsForSequenceNamed:@"GameoverIn"];
     presentedGameOver = YES;
+//     [[CCDirector sharedDirector] pause];
+
     // [[CCDirector sharedDirector] pause];
     // [[[CCDirector sharedDirector] responderManager] removeAllResponders];
 }
 
+-(void) playEffect
+{
+    OALSimpleAudio *audio = [OALSimpleAudio sharedInstance];
+    [audio playEffect:@"button.wav"];
+}
 
+-(void)restart
+{
+    [self playEffect];
+    CCAnimationManager* animationManager = self.animationManager;
+    [animationManager runAnimationsForSequenceNamed:@"GameoverOut"];
+    
+    
+    
+}
 
 - (void)update:(CCTime)delta {
     
-    totalGameTime += delta;
-    
-    // FINGER MOVING
-    float centerOfScreen = _instructions.position.x;
-    _finger.position = ccp(cos(totalGameTime * 3) * 70 + centerOfScreen,_finger.position.y);
-    //
-    
-    if (paused) return;
-    
-    _scroller.position = ccp(_scroller.position.x , _scroller.position.y - (scrollSpeed *delta));
-    // loop the ground
-    for (CCNode *background in _backgrounds) {
-        // get the world position of the ground
-        CGPoint backgroundWorldPosition = [_scroller convertToWorldSpace:background.position];
-        // get the screen position of the ground
-        CGPoint backgroundScreenPosition = [self convertToNodeSpace:backgroundScreenPosition];
-        // if the left corner is one complete width off the screen, move it to the right
-        if (backgroundScreenPosition.y <= (-.5*background.contentSize.height*background.scaleY)) {
-            background.position = ccp(background.position.x, background.position.y + 2 * background.contentSize.height * background.scaleY);
+    if (!presentedGameOver) {
+        totalGameTime += delta;
+        
+        // FINGER MOVING
+        float centerOfScreen = _instructions.position.x;
+        _finger.position = ccp(cos(totalGameTime * 3) * 70 + centerOfScreen,_finger.position.y);
+        //
+        
+        if (paused) return;
+        
+        _scroller.position = ccp(_scroller.position.x , _scroller.position.y - (scrollSpeed *delta));
+        // loop the ground
+        for (CCNode *background in _backgrounds) {
+            // get the world position of the ground
+            CGPoint backgroundWorldPosition = [_scroller convertToWorldSpace:background.position];
+            // get the screen position of the ground
+            CGPoint backgroundScreenPosition = [self convertToNodeSpace:backgroundScreenPosition];
+            // if the left corner is one complete width off the screen, move it to the right
+            if (backgroundScreenPosition.y <= (-.5*background.contentSize.height*background.scaleY)) {
+                background.position = ccp(background.position.x, background.position.y + 2 * background.contentSize.height * background.scaleY);
+            }
+            scrollSpeed += 2.2* delta;
+            
         }
-        scrollSpeed += 2.2* delta;
+        // Increment the time since the last obstacle was added
+        _timeSinceObstacle += delta; // delta is approximately 1/60th of a second
+        
+        // Check to see if two seconds have passed
+        if (_timeSinceObstacle > 0.25f)
+        {
+            // Add a new obstacle
+            [self loadPattern];
+            
+            // Then reset the timer.
+            _timeSinceObstacle = 0.0f;
+            
+        }
 
     }
-    // Increment the time since the last obstacle was added
-    _timeSinceObstacle += delta; // delta is approximately 1/60th of a second
-    
-    // Check to see if two seconds have passed
-    if (_timeSinceObstacle > 0.25f)
-    {
-        // Add a new obstacle
-        [self loadPattern];
-        
-        // Then reset the timer.
-        _timeSinceObstacle = 0.0f;
-        
-    }
-    
     
     
 }
@@ -183,7 +206,7 @@ static  CGFloat scrollSpeed = 500.f;
         explosion.texture = explosionPic.texture;
         
         explosion.color = [CCColor redColor];
-        explosion.speed = 150;
+        explosion.speed = 180;
         [explosion setTotalParticles:30];
         [_testicles addChild:explosion];
         explosion.position = player.position;
@@ -196,17 +219,16 @@ static  CGFloat scrollSpeed = 500.f;
 
 -(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    _instructions.visible = FALSE;
-    _bottomFloor.visible = FALSE;
-    _finger.visible = FALSE;
-    [self performSelector:@selector(side) withObject:nil afterDelay:1];
-    [self performSelector:@selector(side2) withObject:nil afterDelay:1];
+    if (!presentedGameOver) {
+        _instructions.visible = FALSE;
+        _bottomFloor.visible = FALSE;
+        _finger.visible = FALSE;
+        [self performSelector:@selector(side) withObject:nil afterDelay:1];
+        [self performSelector:@selector(side2) withObject:nil afterDelay:1];
 
-
-    
-    scrollSpeed = 500.f;
-    paused = false;
-    
+        scrollSpeed = 500.f;
+        paused = false;
+    }
 
     //[[CCDirector sharedDirector] resume];
 }
@@ -221,11 +243,21 @@ static  CGFloat scrollSpeed = 500.f;
     _side2.visible = FALSE;
 }
 
+
+-(void) actualRestart
+{
+    
+    CCScene *MainScene = [CCBReader loadAsScene:@"MainScene"];
+    [[CCDirector sharedDirector] replaceScene:MainScene];
+    [[CCDirector sharedDirector] resume];
+}
+
 -(void) touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
-           CGPoint touchLocation = [touch locationInNode:self];
-     player.position = ccp(touchLocation.x, player.position.y);
-
+    if (!presentedGameOver) {
+        CGPoint touchLocation = [touch locationInNode:self];
+        player.position = ccp(touchLocation.x, player.position.y);   
+    }
 }
 
 

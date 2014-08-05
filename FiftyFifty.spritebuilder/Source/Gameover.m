@@ -19,13 +19,11 @@
 
 }
 
--(void)restart
+- (void)restart:(id)sender
 {
-    [self playEffect];
-    CCScene *MainScene = [CCBReader loadAsScene:@"MainScene"];
-    [[CCDirector sharedDirector] replaceScene:MainScene];
-    
+    [self.mainScene restart];
 }
+
 
 -(void) playEffect
 {
