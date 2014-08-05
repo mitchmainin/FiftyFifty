@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>2</integer>
+	<integer>0</integer>
 	<key>docDimensionsType</key>
 	<integer>0</integer>
 	<key>fileType</key>
@@ -1213,7 +1213,7 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>266</real>
+											<real>286</real>
 											<real>137.59999084472656</real>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -1227,7 +1227,7 @@
 										<string>Size</string>
 										<key>value</key>
 										<array>
-											<real>40</real>
+											<real>32</real>
 											<real>500</real>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -1279,6 +1279,8 @@
 										<real>1</real>
 									</dict>
 								</array>
+								<key>selected</key>
+								<true/>
 							</dict>
 						</array>
 						<key>customClass</key>
@@ -2255,7 +2257,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>0.76666665077209473</real>
+									<real>1</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -2358,7 +2360,7 @@
 						<key>value</key>
 						<array>
 							<real>0.5</real>
-							<real>0.5</real>
+							<real>1.5</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -2565,7 +2567,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1.5333333015441895</real>
+			<real>1</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -2618,7 +2620,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>0.76666665077209473</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

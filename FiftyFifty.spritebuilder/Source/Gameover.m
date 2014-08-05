@@ -72,7 +72,7 @@
         gamesPlayed++;
         [[NSUserDefaults standardUserDefaults] setInteger:gamesPlayed forKey:@"gamesPlayed"];
         if (gamesPlayed % 3 == 0) {
-            [[RevMobAds session] showFullscreen];
+           // [[RevMobAds session] showFullscreen];
         }
 }
 

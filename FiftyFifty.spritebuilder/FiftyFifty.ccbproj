@@ -87,6 +87,11 @@
 			<key>previewFolderHidden</key>
 			<true/>
 		</dict>
+		<key>ccbResources/boxred.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
 		<key>ccbResources/ccbButtonHighlighted.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -162,6 +167,11 @@
 			<key>scaleFrom</key>
 			<integer>2</integer>
 			<key>tabletScale</key>
+			<integer>1</integer>
+		</dict>
+		<key>ccbResources/logo text.png</key>
+		<dict>
+			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
 	</dict>
