@@ -159,22 +159,22 @@ static  CGFloat scrollSpeed = 500.f;
         totalGameTime += delta;
         
         // FINGER MOVING
-        float centerOfScreen = _instructions.position.x;
-        _finger.position = ccp(cos(totalGameTime * 3) * 70 + centerOfScreen,_finger.position.y);
+        float centerOfScreen = _instructions.positionInPoints.x;
+        _finger.positionInPoints = ccp(cos(totalGameTime * 3) * 70 + centerOfScreen,_finger.positionInPoints.y);
         //
         
         if (paused) return;
         
-        _scroller.position = ccp(_scroller.position.x , _scroller.position.y - (scrollSpeed *delta));
+        _scroller.positionInPoints = ccp(_scroller.positionInPoints.x , _scroller.positionInPoints.y - (scrollSpeed *delta));
         // loop the ground
         for (CCNode *background in _backgrounds) {
             // get the world position of the ground
-            CGPoint backgroundWorldPosition = [_scroller convertToWorldSpace:background.position];
+            CGPoint backgroundWorldPosition = [_scroller convertToWorldSpace:background.positionInPoints];
             // get the screen position of the ground
             CGPoint backgroundScreenPosition = [self convertToNodeSpace:backgroundScreenPosition];
             // if the left corner is one complete width off the screen, move it to the right
             if (backgroundScreenPosition.y <= (-.5*background.contentSize.height*background.scaleY)) {
-                background.position = ccp(background.position.x, background.position.y + 2 * background.contentSize.height * background.scaleY);
+                background.positionInPoints = ccp(background.positionInPoints.x, background.positionInPoints.y + 2 * background.contentSize.height * background.scaleY);
             }
             scrollSpeed += 2.2* delta;
             
@@ -215,7 +215,7 @@ static  CGFloat scrollSpeed = 500.f;
 //
 //    
 //    _touchedWall = true;
-//    if((nodeB.position.x-nodeA.position.x)>0.0)
+//    if((nodeB.positionInPoints.x-nodeA.positionInPoints.x)>0.0)
 //    {
 //        _collidedFromRightSide = false;
 //    }
@@ -241,7 +241,7 @@ static  CGFloat scrollSpeed = 500.f;
         explosion.speed = 180;
         [explosion setTotalParticles:30];
         [_testicles addChild:explosion];
-        explosion.position = player.position;
+        explosion.positionInPoints = player.positionInPoints;
         scrollSpeed = 0;
         [self performSelector:@selector(doGameOver) withObject:nil afterDelay:1];
     }
@@ -287,7 +287,7 @@ static  CGFloat scrollSpeed = 500.f;
 {
     if (!presentedGameOver) {
         CGPoint touchLocation = [touch locationInNode:self];
-        player.position = ccp(touchLocation.x, player.position.y);   
+        player.positionInPoints = ccp(touchLocation.x, player.positionInPoints.y);
     }
 }
 
