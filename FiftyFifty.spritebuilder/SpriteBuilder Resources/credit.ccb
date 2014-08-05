@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>15</integer>
+	<integer>16</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -71,9 +71,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.17844770848751068</real>
-							<real>0.92031592130661011</real>
-							<integer>0</integer>
+							<real>0.33782276511192322</real>
+							<real>0.0022192941978573799</real>
+							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
 						</array>
@@ -96,11 +96,19 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.25296866893768311</real>
-							<real>0.25296866893768311</real>
-							<false/>
+							<real>3</real>
+							<real>3</real>
+							<true/>
 							<integer>0</integer>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>rotation</string>
+						<key>type</key>
+						<string>Degrees</string>
+						<key>value</key>
+						<real>180</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -120,8 +128,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>248</real>
-							<real>248</real>
+							<real>126</real>
+							<real>90</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -166,7 +174,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/start.png</string>
+							<string>ccbResources/arrow.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -177,7 +185,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/start.png</string>
+							<string>ccbResources/arrow.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -397,11 +405,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>162.00003051757812</real>
-							<real>446</real>
+							<real>0.50625008344650269</real>
+							<real>0.78521126508712769</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -435,7 +443,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>Justin Matsnev, Mitch Malinin &amp; Yahya Bouhlel</string>
+							<string>Justin Matsnev, Mitchell Malinin &amp; Yahya Bouhlel</string>
 							<false/>
 						</array>
 					</dict>
@@ -571,6 +579,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -604,11 +614,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>155.00003051757812</real>
-							<real>421</real>
+							<real>0.48437508940696716</real>
+							<real>0.74119716882705688</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -811,11 +821,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>155.00003051757812</real>
-							<real>397.00003051757812</real>
+							<real>0.48437508940696716</real>
+							<real>0.69894373416900635</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>
@@ -1018,11 +1028,11 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>154.00003051757812</real>
-							<real>365</real>
+							<real>0.4812501072883606</real>
+							<real>0.64260566234588623</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>

@@ -2315,6 +2315,24 @@
 										<real>1.5</real>
 									</array>
 								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>position</string>
+									<key>time</key>
+									<real>0.93333333730697632</real>
+									<key>type</key>
+									<integer>3</integer>
+									<key>value</key>
+									<array>
+										<real>0.5</real>
+										<real>1.5105633735656738</real>
+									</array>
+								</dict>
 							</array>
 							<key>name</key>
 							<string>position</string>
@@ -2358,7 +2376,7 @@
 						<key>value</key>
 						<array>
 							<real>0.5</real>
-							<real>1.5</real>
+							<real>1.5105633735656738</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -2386,6 +2404,8 @@
 						<string>GameOver.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>

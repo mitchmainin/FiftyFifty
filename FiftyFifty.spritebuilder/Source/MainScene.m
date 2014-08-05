@@ -273,7 +273,6 @@ static  CGFloat scrollSpeed = 500.f;
     
     
         int random = arc4random() % 2;
-        NSLog(@"%i",random);
         switch (random) {
                 
             case 0:
