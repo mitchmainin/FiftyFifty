@@ -8,6 +8,7 @@
 
 #import "Gameover.h"
 #import "MainScene.h"
+#import <RevMobAds/RevMobAds.h>
 
 @implementation Gameover
 {
@@ -16,11 +17,13 @@
 
     CCLabelTTF *_scoreLabel;
     CCLabelTTF *_highscoreLabel;
-
+    
+    BOOL didShowScreen;
 }
 
 - (void)restart:(id)sender
 {
+   
     [self.mainScene restart];
 }
 
@@ -35,6 +38,7 @@
 -(void)update:(CCTime)delta
 
 {
+
     // than reload  state
     [self loadSavedState];
     _highscoreLabel.string = [NSString stringWithFormat:@"%ld", (long)_highScore];
@@ -62,4 +66,14 @@
     _scoreLabel.string = [NSString stringWithFormat:@"%ld",(long)_points];
     
 }
+
+-(void)trackGameOver {
+        NSInteger gamesPlayed = [[NSUserDefaults standardUserDefaults] integerForKey:@"gamesPlayed"];
+        gamesPlayed++;
+        [[NSUserDefaults standardUserDefaults] setInteger:gamesPlayed forKey:@"gamesPlayed"];
+        if (gamesPlayed % 3 == 0) {
+            [[RevMobAds session] showFullscreen];
+        }
+}
+
 @end
