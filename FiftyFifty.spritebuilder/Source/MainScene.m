@@ -252,7 +252,7 @@ static  CGFloat scrollSpeed = 500.f;
 {
     if (!presentedGameOver) {
         _instructions.visible = FALSE;
-       // _bottomFloor.visible = FALSE;
+        _bottomFloor.visible = FALSE;
         _finger.visible = FALSE;
         [self performSelector:@selector(side) withObject:nil afterDelay:1];
         [self performSelector:@selector(side2) withObject:nil afterDelay:1];
