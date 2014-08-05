@@ -11,6 +11,8 @@
 #import "Gameover.h"
 #import "CCPhysics+ObjectiveChipmunk.h"
 #import "CCEffectGlow.h"
+#import <RevMobAds/RevMobAds.h>
+#import "goal.h"
 
 
 static  CGFloat scrollSpeed = 500.f;
@@ -53,6 +55,8 @@ static  CGFloat scrollSpeed = 500.f;
     
     bool paused;
     Gameover *_gameOverScreen;
+    
+    BOOL didShowScreen;
 }
 
 -(void) didLoadFromCCB
@@ -99,12 +103,24 @@ static  CGFloat scrollSpeed = 500.f;
 
     _gameOverScreen.mainScene = self;
     CCAnimationManager* animationManager = self.animationManager;
+    [_gameOverScreen trackGameOver];
     [animationManager runAnimationsForSequenceNamed:@"GameoverIn"];
-    presentedGameOver = YES;
+//    if (!didShowScreen) {
+//        
+//        
+//        NSInteger gamesPlayed = [[NSUserDefaults standardUserDefaults] integerForKey:@"gamesPlayed"];
+//        gamesPlayed++;
+//        [[NSUserDefaults standardUserDefaults] setInteger:gamesPlayed forKey:@"gamesPlayed"];
+//        if (gamesPlayed % 3 == 0) {
+//           // [[RevMobAds session] showFullscreen];
+//        }
+//        didShowScreen = TRUE;
+//    }
+
 //     [[CCDirector sharedDirector] pause];
 
     // [[CCDirector sharedDirector] pause];
-    // [[[CCDirector sharedDirector] responderManager] removeAllResponders];
+//     [[[CCDirector sharedDirector] responderManager] removeAllResponders];
 }
 
 -(void) playEffect
@@ -122,6 +138,20 @@ static  CGFloat scrollSpeed = 500.f;
     
     
 }
+
+//-(BOOL) ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair goal:(CCNode *)nodeA sensor:(CCNode *)nodeB
+//{
+//    [self removeChild:goal];
+//    CCParticleExplosion *explosion = [[CCParticleExplosion alloc] init];
+//    CCSprite *explosionPic = [CCSprite spriteWithImageNamed:@"ccbResources/explosionParticle.png"];
+//    explosion.texture = explosionPic.texture;
+//    explosion.speed = 200;
+//    [explosion setTotalParticles:30];
+//    [nodeA addChild:explosion];
+//    explosion.position = ccp(110 ,110);
+//    
+//    return false;
+//}
 
 - (void)update:(CCTime)delta {
     
@@ -201,6 +231,8 @@ static  CGFloat scrollSpeed = 500.f;
 {
     [nodeA removeFromParent];
     if (!_gameOver) {
+        presentedGameOver = YES;
+        _gameOver = YES;
         CCParticleExplosion *explosion = [[CCParticleExplosion alloc] init];
         CCSprite *explosionPic = [CCSprite spriteWithImageNamed:@"ccbResources/explosionParticle.png"];
         explosion.texture = explosionPic.texture;
@@ -213,7 +245,6 @@ static  CGFloat scrollSpeed = 500.f;
         scrollSpeed = 0;
         [self performSelector:@selector(doGameOver) withObject:nil afterDelay:1];
     }
-    _gameOver = TRUE;
     return FALSE;
 }
 
@@ -221,7 +252,7 @@ static  CGFloat scrollSpeed = 500.f;
 {
     if (!presentedGameOver) {
         _instructions.visible = FALSE;
-        _bottomFloor.visible = FALSE;
+       // _bottomFloor.visible = FALSE;
         _finger.visible = FALSE;
         [self performSelector:@selector(side) withObject:nil afterDelay:1];
         [self performSelector:@selector(side2) withObject:nil afterDelay:1];

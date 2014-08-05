@@ -14,4 +14,5 @@
 
 @property (nonatomic, weak) MainScene *mainScene;
 
+-(void)trackGameOver;
 @end
